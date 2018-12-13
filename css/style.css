@@ -402,7 +402,11 @@ h2 a {
   text-align: center; }
 
 #slideshow {
-  display: inline-block; }
+  display: inline-block;
+  margin: 0 auto; }
+
+.shideshow {
+  margin: 0 auto; }
 
 @media (min-width: 600px) {
   background-color: red;
