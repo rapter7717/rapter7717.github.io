@@ -1,0 +1,152 @@
+html {
+    height:100%;
+    box-sizing: border-box; 
+}
+
+body {
+    height: 100%;
+    background-color: $background-color;
+    padding: 2% ;
+    font-family: $first-font;
+}
+
+article {
+    color: $article-color;
+}
+
+header {
+    color: $primary-color;
+    img {
+        object-fit: contain;
+        -webkit-animation:wiggle .75s cubic-bezier(1, 0.03, 1, 1);
+        -moz-animation:wiggle .75s cubic-bezier(1, 0.03, 1, 1);
+        animation:wiggle .75s cubic-bezier(1, 0.03, 1, 1);
+    }
+    h1 {
+        font-weight: 400;
+        font-size: 2em;
+        @media (min-width: 800px) {
+            font-size: 4em;
+        }
+    }
+    nav {
+        padding: 2em;
+        font-size: 20px;
+    }
+}
+
+
+h2 {
+    a {
+        color: $link-color;
+        &:hover {
+            color:$link-hover;
+        }
+        &:visited {
+            color:$link-visited;
+        }
+    
+     }
+
+}
+
+.my-container {
+    background-color: $primary-color;
+    //display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    font-family: $second-font;
+    text-align: center;
+
+    @media (min-width: 600px) {
+        background-color:$media-background-color;
+        align-items: center;
+    }
+    @media (min-width: 800px) {
+        justify-content: space-evenly; 
+    }
+}
+
+.biography {
+    background-color: $article-color;
+}
+
+.sidebar {
+    background-color: $article-color;
+}
+
+.new-content{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.item {
+    width: 20vw;
+    height: 20vw;
+    min-height: 250px;
+    min-width: 200px;
+    box-sizing: content-box;
+    padding: 2em;
+    margin: 2em;
+    border: 1px solid $border-color;
+    background-color: $primary-color;
+    @media (max-width: 1100px) {
+        align-items: center;
+        height: 46vh;
+    }
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    &:hover {
+        opacity: .75;
+        width: 22vw;
+    }
+
+}
+
+.first {
+    order: 2;
+    background-color: $primary-color;
+}
+
+.third {
+    order: 2;
+}
+
+.slideshow {
+    //display: flex;
+    //align-items: center;
+    //height: 40vh;
+    text-align: center;
+
+}
+
+
+@media (min-width: 600px) {
+    background-color: red;
+    font-size: 2em;
+}
+
+@media (min-width: 800px) {
+    
+}
+
+@-moz-keyframes wiggle { 
+    25% { -moz-transform: rotate(20deg); } 
+    75% { -moz-transform: rotate(-20deg); } 
+    100% { -moz-transform: rotate(0deg); } 
+}
+
+@-webkit-keyframes wiggle { 
+    25% { -webkit-transform: rotate(20deg); } 
+    75% { -webkit-transform: rotate(-20deg); } 
+    100% { -webkit-transform: rotate(0deg); }
+}
+
+@keyframes wiggle { 
+    25% { -webkit-transform: rotate(20deg); transform:rotate(20deg); } 
+    75% { -webkit-transform: rotate(-20deg); transform:rotate(-20deg); } 
+    100% { -webkit-transform: rotate(0deg); transform:rotate(0deg); } 
+}
