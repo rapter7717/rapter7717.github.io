@@ -41,8 +41,7 @@ h1 {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -76,8 +75,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */ }
 
 /**
@@ -209,8 +207,7 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -241,8 +238,7 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -310,8 +306,7 @@ template {
 
 html {
   height: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
+  box-sizing: border-box; }
 
 body {
   height: 100%;
@@ -325,9 +320,9 @@ article {
 header {
   color: cadetblue; }
   header img {
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
     -webkit-animation: wiggle 0.75s cubic-bezier(1, 0.03, 1, 1);
+    -moz-animation: wiggle 0.75s cubic-bezier(1, 0.03, 1, 1);
     animation: wiggle 0.75s cubic-bezier(1, 0.03, 1, 1); }
   header h1 {
     font-weight: 400;
@@ -348,26 +343,17 @@ h2 a {
 
 .my-container {
   background-color: cadetblue;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  flex-flow: row wrap;
+  align-items: flex-start;
   font-family: "Roboto Mono", monospace;
   text-align: center; }
   @media (min-width: 600px) {
     .my-container {
       background-color: beige;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; } }
+      align-items: center; } }
   @media (min-width: 800px) {
     .my-container {
-      -webkit-box-pack: space-evenly;
-          -ms-flex-pack: space-evenly;
-              justify-content: space-evenly; } }
+      justify-content: space-evenly; } }
 
 .biography {
   background-color: burlywood; }
@@ -376,56 +362,58 @@ h2 a {
   background-color: burlywood; }
 
 .new-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  flex-flow: row wrap;
+  justify-content: space-around; }
 
 .item {
   width: 20vw;
   height: 20vw;
   min-height: 250px;
   min-width: 200px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
+  box-sizing: content-box;
   padding: 2em;
   margin: 2em;
   border: 1px solid black;
   background-color: cadetblue;
   -webkit-transition: all .25s ease-in-out;
+  -moz-transition: all .25s ease-in-out;
+  -o-transition: all .25s ease-in-out;
   transition: all .25s ease-in-out; }
   @media (max-width: 1100px) {
     .item {
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center;
+      align-items: center;
       height: 46vh; } }
   .item:hover {
     opacity: .75;
     width: 22vw; }
 
 .first {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
   background-color: cadetblue; }
 
 .third {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2; }
+  order: 2; }
 
 .slideshow {
   text-align: center; }
 
+#wrapper {
+  text-align: center; }
+
+#slideshow {
+  display: inline-block; }
+
 @media (min-width: 600px) {
   background-color: red;
   font-size: 2em; }
+@-moz-keyframes wiggle {
+  25% {
+    -moz-transform: rotate(20deg); }
+  75% {
+    -moz-transform: rotate(-20deg); }
+  100% {
+    -moz-transform: rotate(0deg); } }
 @-webkit-keyframes wiggle {
   25% {
     -webkit-transform: rotate(20deg); }
