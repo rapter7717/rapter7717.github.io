@@ -315,7 +315,10 @@ body {
   font-family: "Montserrat", sans-serif; }
 
 article {
-  color: burlywood; }
+  color: black; }
+  @media (min-width: 600px) {
+    article {
+      color: burlywood; } }
 
 header {
   color: cadetblue; }
