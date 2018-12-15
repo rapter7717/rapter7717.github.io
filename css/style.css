@@ -403,6 +403,9 @@ h2 a {
 
 #wrapper {
   text-align: center; }
+  @media screen and (max-width: 480px) {
+    #wrapper img {
+      height: 200px; } }
 
 #slideshow {
   display: inline-block; }
