@@ -1,16 +1,14 @@
 {
-
 "name" : "Adventure Game Data",
 "version" : "1.0",
 "chapters" : [
-    {
-        "prod_name" : "Vitamin A",
-        "prod_id" : "V-A1037",
-        "retail_price" : 4.99,
-        "description" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        "in_stock" : true,
-        "photo_src" : "images/products/vitamin-a.jpg"
-    },
-
-]
+        {
+            "chapter_id" : "1A",
+            "chapter_text" : "<p>This is the text for the first chapter</p>"
+        },
+        {
+            "chapter_id" : "1B",
+            "chapter_text" :  "blank"
+        }
+    ]
 }
