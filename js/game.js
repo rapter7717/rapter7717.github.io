@@ -1,19 +1,23 @@
 $(document).ready(function(){
 
     console.log ("it worked");
-    var savedName=["Austin", "Susan", "Benita", "Francine", "Adrain", "Dakota"];
+    var savedName=["Austin", "Susan", "Benita", "Francine", "Adrian", "Dakota"];
     var playerName = document.getElementsByName("player")[0].value;
+    var secondButton = document.createElement("button");
+    secondButton.innerHTML = "Do Something";
+    secondButton.className = "btn btn-secondary";
     $('#btn-begin').on('click',function() {
         console.log ("button clicked");
         console.log (playerName);
-        if (playerName == savedName[0]){
+        if (playerName == savedName[0] || playerName == savedName[2] || playerName == savedName[3] || playerName == savedName[4] || playerName == savedName[5] || playerName == savedName[1]){
             console.log ("name match");
             let chapterID = "1A";
             $.getJSON("json/game-data.json")
             .done(function(gameData) {
                 gameData.chapters.forEach(function(elem) {
                     if (elem.chapter_id == chapterID) {
-                        $("#game-text").html(elem.chapter_text);
+                        $("#game-text").html("Hello " + playerName + "!" + "</br>" + "It's good to see you again!" + elem.chapter_text).append(secondButton);
+                        
                     } else {
                         console.log ("failure");
                     };
@@ -33,6 +37,15 @@ $(document).ready(function(){
             });
         };
     });
+    secondButton.addEventListener ("click", function() {
+        console.log("second button clicked");
+        $('#game-section').addClass('animated slideOutLeft');
+        $('#game-section').fadeOut(500);
+        // I recongnize that this coudl be done with a function similar to this: $("#game-section").animate({left: "500"}, 1000, "swing") but I'm working with Animate.css for consistency.
+        $('#game-section').removeClass('animated slideOutLeft');
+        $('#game-section').addClass('animated slideInRight');
+        $('#game-section').fadeIn(500);
+        });
 
 
     // $('#btn-begin').on('click',function() {
