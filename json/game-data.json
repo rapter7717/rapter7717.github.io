@@ -9,11 +9,19 @@
         },
         {
             "chapter_id" : "1B",
-            "chapter_text" :  "<p>This is the text for the first chapter<\/p> <button type=\"button\" id=\"second-button\" class=\"btn btn-secondary\">Click Here To continue<\/button>"
+            "chapter_text" :  "<p>You wake up in a dark room... but wait, it doesn't feel right... it's not... nighttime<\/p>"
         },
         {
             "chapter_id" : "2",
             "chapter_text" :  "<p>No, it's not dark... you can't see... you've gone blind!<\/p>"
+        },
+        {
+            "chapter_id" : "3A",
+            "chapter_text" :  "<p>Congratulations on the self control, but you are still blind<\/p>"
+        },
+        {
+            "chapter_id" : "3B",
+            "chapter_text" :  "<p>You've chosen to panic... May I suggest not doing that? <\/p>"
         }
     ]
 }

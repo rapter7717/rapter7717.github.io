@@ -29,7 +29,7 @@ $(document).ready(function(){
             .done(function(gameData) {
                 gameData.chapters.forEach(function(elem) {
                     if (elem.chapter_id == chapterID) {
-                        $("#game-text").html(elem.chapter_text);
+                        $("#game-text").html(elem.chapter_text).append(secondButton);
                     } else {
                         console.log ("failure");
                     };
@@ -63,6 +63,46 @@ $(document).ready(function(){
         $('#game-section').addClass('animated slideInRight');
         $('#game-section').fadeIn(500);
         });
+        var fifthButton = document.createElement("button");
+        fifthButton.innerHTML = "Be Calm...";
+        fifthButton.className = "btn btn-secondary";
+        var sixthButton = document.createElement("button");
+        sixthButton.innerHTML = "Panic!";
+        sixthButton.className = "btn btn-secondary";
+        thirdButton.addEventListener ("click", function() {
+            console.log("Third button clicked");
+            let chapterID = "3A";
+                $.getJSON("json/game-data.json")
+                .done(function(gameData) {
+                    gameData.chapters.forEach(function(elem) {
+                        if (elem.chapter_id == chapterID) {
+                            $("#game-text").html(elem.chapter_text).append(fifthButton).append(" || ").append(sixthButton);
+                        } else {
+                            console.log ("failure");
+                        };
+                    });
+                });
+            $('#game-section').removeClass('slideInRight');
+            $('#game-section').addClass('animated slideInRight');
+            $('#game-section').fadeIn(500);
+            });
+            fourthButton.addEventListener ("click", function() {
+                console.log("Third button clicked");
+                let chapterID = "3B";
+                    $.getJSON("json/game-data.json")
+                    .done(function(gameData) {
+                        gameData.chapters.forEach(function(elem) {
+                            if (elem.chapter_id == chapterID) {
+                                $("#game-text").html(elem.chapter_text).append(fifthButton).append(" || ").append(sixthButton);
+                            } else {
+                                console.log ("failure");
+                            };
+                        });
+                    });
+                $('#game-section').removeClass('slideInRight');
+                $('#game-section').addClass('animated slideInRight');
+                $('#game-section').fadeIn(500);
+                });
 
 
     // $('#btn-begin').on('click',function() {
